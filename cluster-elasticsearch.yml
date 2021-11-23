@@ -6,7 +6,7 @@ services:
     environment:
       - node.name=es01 #assign a name to the node
       - cluster.name=es-docker-cluster # define the cluster name
-      - discovery.seed_hosts=es02,es02 # declare the available nodes
+      - discovery.seed_hosts=es01,es02 # declare the available nodes
       - cluster.initial_master_nodes=es01,es02 # negotiation of which node is eligible to be the master
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
